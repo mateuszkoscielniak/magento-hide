@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <mk>
+            <final_price_gust>
+                <hide_enabled>0</hide_enabled>
+            </final_price_gust>
+            <final_price_logged_in>
+                <hide_enabled>0</hide_enabled>
+            </final_price_logged_in>
+            <add_to_card_logged_in>
+                <hide_enabled>0</hide_enabled>
+            </add_to_card_logged_in>
+            <add_to_card_gust>
+                <hide_enabled>0</hide_enabled>
+            </add_to_card_gust>
+        </mk>
+    </default>
+</config>
