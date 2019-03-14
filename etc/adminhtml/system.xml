@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="m_k" translate="label" sortOrder="200">
+            <label>MK</label>
+        </tab>
+        <section id="mk_hide" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Hide</label>
+            <tab>m_k</tab>
+            <resource>MK_Hide::hide_config</resource>
+            <group id="mk_catalog" translate="label" type="text" sortOrder="2" showInDefault="1"
+                   showInWebsite="1" showInStore="1">
+                <label>Catalog</label>
+                <field id="final_price_gust" translate="label" type="select" sortOrder="1" showInDefault="1"
+                       showInWebsite="1" showInStore="0">
+                    <label>Hide price for Guest's</label>
+                    <config_path>mk/final_price_gust/hide_enabled</config_path>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="final_price_logged_in" translate="label" type="select" sortOrder="1" showInDefault="1"
+                       showInWebsite="1" showInStore="0">
+                    <label>Hide price for logged in</label>
+                    <config_path>mk/final_price_logged_in/hide_enabled</config_path>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="add_to_card_gust" translate="label" type="select" sortOrder="1" showInDefault="1"
+                       showInWebsite="1" showInStore="0">
+                    <label>Hide Add To CARD for Guest's</label>
+                    <config_path>mk/add_to_card_gust/hide_enabled</config_path>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="add_to_card_logged_in" translate="label" type="select" sortOrder="1" showInDefault="1"
+                       showInWebsite="1" showInStore="0">
+                    <label>Hide Add To CARD  for logged in</label>
+                    <config_path>mk/add_to_card_logged_in/hide_enabled</config_path>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
