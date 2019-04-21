@@ -27,13 +27,13 @@
 
                 <field id="add_to_card_gust" translate="label" type="select" sortOrder="1" showInDefault="1"
                        showInWebsite="1" showInStore="0">
-                    <label>Hide Add To CARD for Guest's</label>
+                    <label>Hide Add To CART for Guest's</label>
                     <config_path>mk/add_to_card_gust/hide_enabled</config_path>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
                 <field id="add_to_card_logged_in" translate="label" type="select" sortOrder="1" showInDefault="1"
                        showInWebsite="1" showInStore="0">
-                    <label>Hide Add To CARD  for logged in</label>
+                    <label>Hide Add To CART  for logged in</label>
                     <config_path>mk/add_to_card_logged_in/hide_enabled</config_path>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
