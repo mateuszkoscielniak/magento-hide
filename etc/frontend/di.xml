@@ -6,4 +6,7 @@
     <type name="Magento\Catalog\Model\Product">
         <plugin name="mk_product" type="MK\Hide\Plugin\Catalog\Model\ProductPlugin"/>
     </type>
+    <!--<type name="Magento\Catalog\Pricing\Render\FinalPriceBox">-->
+        <!--<plugin name="mk_final_price_box" type="MK\Hide\Plugin\Pricing\Render\FinalPriceBoxPlugin"/>-->
+    <!--</type>-->
 </config>
