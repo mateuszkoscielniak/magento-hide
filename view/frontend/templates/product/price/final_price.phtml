@@ -17,7 +17,7 @@ $minProduct = $block->getSaleableItem()
     ->getMinProduct();
 
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-$customerSession = $objectManager->get('Magento\Customer\Model\Session');
+$customerSession = $objectManager->create('Magento\Customer\Model\Session');
 
 if ($minProduct) {
     $amountRender = $block->getRendererPool()
@@ -30,9 +30,9 @@ if ($minProduct) {
 }
 ?>
 <div class="price-box">
-    <?php if ($minProduct && \Magento\Framework\Pricing\Render::ZONE_ITEM_VIEW != $block->getZone() && $customerSession->isLoggedIn()): ?>
+    <?php if ($minProduct && \Magento\Framework\Pricing\Render::ZONE_ITEM_VIEW != $block->getZone() && $customerSession->isLoggedIn() == true) : ?>
     <p class="minimal-price">
-        <span class="price-label"><?= /* @escapeNotVerified */ __('Starting at') ?></span><?= $amountRender->toHtml() ?>
+        <span class="price-label"><b><?= /* @escapeNotVerified */ __('Starting at') ?></span><?= $amountRender->toHtml() ?></b>
     </p>
     <?php endif ?>
 </div>
