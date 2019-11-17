@@ -16,6 +16,9 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     const XML_PATH_MK_HIDE_ADD_TO_CARD_GUEST = 'mk/add_to_card_gust/hide_enabled';
     const XML_PATH_MK_HIDE_ADD_TO_CARD_LOGGED_IN = 'mk/add_to_card_logged_in/hide_enabled';
 
+
+    const XML_PATH_MK_HIDE_DEFAULT_GROUP = 'mk/group/default_group';
+
     /**
      * Store manager
      *
@@ -84,6 +87,16 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     {
         return $this->scopeConfig->getValue(
             self::XML_PATH_MK_HIDE_ADD_TO_CARD_LOGGED_IN,
+            \Magento\Store\Model\ScopeInterface::SCOPE_STORE
+        );
+    }
+    /**
+     * @return mixed
+     */
+    public function getBlockedGroup()
+    {
+        return $this->scopeConfig->getValue(
+            self::XML_PATH_MK_HIDE_DEFAULT_GROUP,
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
         );
     }

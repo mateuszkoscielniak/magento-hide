@@ -43,7 +43,11 @@ class ProductPlugin
     {
 
         $isLoggedIn = $this->context->getValue(CustomerContext::CONTEXT_AUTH);
+        $customer_group = $this->context->getValue(CustomerContext::CONTEXT_GROUP);
 
+        if($customer_group == $this->data->getBlockedGroup()){
+            return false;
+        }
         if ($isLoggedIn && $this->data->hideAddToCardForLoggedIn()) {
             return false;
         }

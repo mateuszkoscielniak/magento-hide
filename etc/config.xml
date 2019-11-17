@@ -15,6 +15,9 @@
             <add_to_card_gust>
                 <hide_enabled>0</hide_enabled>
             </add_to_card_gust>
+            <group>
+                <default_group>0</default_group>
+            </group>
         </mk>
     </default>
 </config>
